@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "dd76e42b-fd24-46fb-b814-22d75332da50++251",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "dd76e42b-fd24-46fb-b814-22d75332da50++251" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "dd76e42b-fd24-46fb-b814-22d75332da50++251" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0BD7EF7D-AF85-45C4-AD5F-0173B3D85D27",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "dd76e42b-fd24-46fb-b814-22d75332da50++251" : "meteo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "meteo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/meteo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/rendu-svn.etna-alternance.net\/v2\/2018_Bachelor%20-%20Octobre_TIC-MOB3_2_1-2144",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "dd76e42b-fd24-46fb-b814-22d75332da50++251"
+    }
+  ]
+}

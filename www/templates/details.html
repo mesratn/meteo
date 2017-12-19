@@ -1,0 +1,14 @@
+<ion-view view-title="Stats">
+  <ion-content>
+    Stats - {{title}}<br />
+
+    <select ng-model="graph.headerIndex" ng-change="draw()"
+      ng-options="headers.indexOf(header) as header for header in headers">
+    </select>
+    <div id="graph-first">
+    </div>
+    <div id="graph-second">
+    </div>
+  </ion-content>
+</ion-view>
+
