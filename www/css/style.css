@@ -1,1 +1,51 @@
 /* Empty. Add your own CSS if you like */
+
+h1 {
+	color: #2CA4B0; 
+	font-family: 'Oleo Script', cursive; 
+	font-size: 24px; 
+	font-weight: normal; 
+	line-height: 32px; 
+	margin: 0 0 18px; 
+	text-shadow: 1px 0 0 #fff;
+}
+
+p, li, label { 
+	color: #333; 
+	font-family: 'Original Surfer', cursive; 
+	font-size: 16px; 
+	line-height: 28px; 
+	margin: 0 0 24px; 
+}
+
+a { 
+	color: #d04764; 
+	font-family: 'Original Surfer', cursive; 
+}
+
+
+a:hover { 
+	text-decoration: underline 
+}
+
+legend {
+	color: #a7e8f8; 
+	font-family: 'Julius Sans One', sans-serif, italic; 
+	font-size: 22px; 
+	font-weight: bold; 
+	line-height: 32px; 
+	margin: 0 0 24px; 
+	text-shadow: 1px 1px 1px #082b34;
+	text-align: center;
+	background-color: #0CA5B0; 
+}
+
+button {
+	background-color: #0CA5B0; 
+	color: white; 
+	border-radius: 5px;
+}
+
+input {
+	border-radius: 5px;
+}

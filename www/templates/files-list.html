@@ -6,17 +6,17 @@
     <ul>
       <li ng-repeat="file in files | orderBy:'name'">
         Name : {{file.name}} &bull;
-        <a href="#/details/{{$index}}">View graphics</a>
-        <span ng-click="remove($index)">&bull; [remove]</span>
+        <a href="#/details/{{$index}}">View graphics</a> &bull;
+        <span ng-click="remove($index)" style="color: red"> [remove]</span>
       </li>
     </ul>
-    
+    <br>
     <form ng-submit="upload()">
       <fieldset style="width: 50%">
         <legend>Upload file</legend><br />
         <label for="uploadUrl">File name :</label>
         <input name="uploadUrl" ng-model="form.uploadUrl" placeholder="File name" length="100" />
-        <input type="submit" value="Upload" />
+        <button type="submit">Upload</button>
       </fieldset>
     </form>
   </ion-content>
