@@ -36,9 +36,9 @@ angular.module('meteo', ['ionic', 'meteo.controllers', 'meteo.details'])
       cache: false,
       abstract: true,
       templateUrl: 'templates/menu.html',
-      controller: 'AppCtrl'
+      controller: 'AppController'
     })
-  addRoute('files-list', '/files', 'FileListCtrl');
+  addRoute('files-list', '/files', 'FileController');
   addRoute('details', '/details/:id', 'DetailsCtrl');
 
   $urlRouterProvider.otherwise('/files');

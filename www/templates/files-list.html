@@ -1,23 +1,22 @@
-<ion-view view-title="Fichiers">
+<ion-view view-title="File Manager">
   <ion-content>
     <br /><br />
-    <h1>Fichier{{files.length > 1 ? 's' : ''}}</h1>
+    <h1>File{{files.length > 1 ? 's' : ''}} uploaded</h1>
 
     <ul>
       <li ng-repeat="file in files | orderBy:'name'">
-        <span ng-click="removeFile($index)">[-]</span>
-        {{file.name}} &bull;
-        <a href="#/details/{{$index}}">D&eacute;tails</a>
+        Name : {{file.name}} &bull;
+        <a href="#/details/{{$index}}">View graphics</a>
+        <span ng-click="remove($index)">&bull; [remove]</span>
       </li>
     </ul>
     
     <form ng-submit="upload()">
       <fieldset style="width: 50%">
-        <legend>Upload d'un fichier</legend><br />
-        <label for="uploadUrl">Nom du fichier :</label>
-        <input name="uploadUrl" ng-model="form.uploadUrl" placeholder="Nom du fichier" length="100" />
-        <i>(les fichiers de donn&eacute;s sont dans <b>data/</b>)</i><br />
-        <input type="submit" value="Uploader" />
+        <legend>Upload file</legend><br />
+        <label for="uploadUrl">File name :</label>
+        <input name="uploadUrl" ng-model="form.uploadUrl" placeholder="File name" length="100" />
+        <input type="submit" value="Upload" />
       </fieldset>
     </form>
   </ion-content>

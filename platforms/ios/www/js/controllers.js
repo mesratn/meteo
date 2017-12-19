@@ -1,7 +1,7 @@
 angular.module('meteo.controllers', [])
-.controller('AppCtrl', function ($scope) {
+.controller('AppController', function ($scope) {
 })
-.controller('FileListCtrl', function ($scope, $http, $window) {
+.controller('FileController', function ($scope, $http, $window) {
 
   /*
   ionic.Platform.ready(function () {
@@ -14,7 +14,7 @@ angular.module('meteo.controllers', [])
   });
   */
 
-  function saveFiles() {
+  function save() {
     localStorage.setItem('files', angular.toJson($scope.files || []));
   }
   $scope.files = loadFiles();
@@ -62,7 +62,7 @@ angular.module('meteo.controllers', [])
         file.url = $scope.form.uploadUrl;
         file.name = name;
         $scope.files.push(file);
-        saveFiles();
+        save();
       })
       .error(function (err) {
         alert(err);
@@ -70,7 +70,7 @@ angular.module('meteo.controllers', [])
   };
   $scope.removeFile = function (idx) {
     removeAt($scope.files, idx);
-    saveFiles();
+    save();
   };
 });
 
@@ -84,7 +84,7 @@ angular.module('meteo.controllers', [])
 
 
 /*
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppController', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

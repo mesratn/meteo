@@ -1,20 +1,9 @@
 angular.module('meteo.controllers', [])
-.controller('AppCtrl', function ($scope) {
+.controller('AppController', function ($scope) {
 })
-.controller('FileListCtrl', function ($scope, $http, $window) {
-
-  /*
-  ionic.Platform.ready(function () {
-    var requestFS = $window.requestFileSystem;
-    if (!requestFS) {
-      //alert("Your platform doesn't have a file system");
-      return;
-    }
-    alert("ok");
-  });
-  */
-
-  function saveFiles() {
+.controller('FileController', function ($scope, $http, $window) {
+  //fonction save sert a sauvgarder les fichiers en mettant a jour le localstorage
+  function save() {
     localStorage.setItem('files', angular.toJson($scope.files || []));
   }
   $scope.files = loadFiles();
@@ -22,9 +11,10 @@ angular.module('meteo.controllers', [])
   $scope.form = {
     uploadUrl: 'data/1_ENHANCED_01.his'
   };
+  //upload sert a valider le formulaire et ajouter le fichier a la liste
   $scope.upload = function () {
     if (!$scope.form.uploadUrl) {
-      alert("Pas de nom");
+      alert("No name");
       return;
     }
 
@@ -54,7 +44,7 @@ angular.module('meteo.controllers', [])
         }
 
         if (exists('name', name, $scope.files)) {
-          alert("Date deja uploadee");
+          alert("Date already uploaded");
           return;
         }
 
@@ -62,14 +52,15 @@ angular.module('meteo.controllers', [])
         file.url = $scope.form.uploadUrl;
         file.name = name;
         $scope.files.push(file);
-        saveFiles();
+        save();
       })
       .error(function (err) {
         alert(err);
       });
   };
-  $scope.removeFile = function (idx) {
+  //remove sert a suuprimer un fichier de la liste
+  $scope.remove = function (idx) {
     removeAt($scope.files, idx);
-    saveFiles();
+    save();
   };
 });
